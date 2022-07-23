@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "fullname": "Farid Boulos",
+    "jobtitle": "Developer",
+    "department": "Tech",
+    "location": "Beirut"
+  },
+  {
+    "id": 2,
+    "fullname": "Gaelle Bou Maroun",
+    "jobtitle": "Marketing",
+    "department": "Business",
+    "location": "USA"
+  },
+  {
+    "id": 3,
+    "fullname": "Fattoum Fattoumeh",
+    "jobtitle": "IT",
+    "department": "Tech",
+    "location": "Beirut"
+  }
+]
