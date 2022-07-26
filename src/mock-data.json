@@ -1,22 +1,22 @@
 [
   {
     "id": 1,
-    "fullname": "Farid Boulos",
-    "jobtitle": "Developer",
+    "fullName": "Farid Boulos",
+    "jobTitle": "Developer",
     "department": "Tech",
     "location": "Beirut"
   },
   {
     "id": 2,
-    "fullname": "Gaelle Bou Maroun",
-    "jobtitle": "Marketing",
+    "fullName": "Gaelle Bou Maroun",
+    "jobTitle": "Marketing",
     "department": "Business",
     "location": "USA"
   },
   {
     "id": 3,
-    "fullname": "Fattoum Fattoumeh",
-    "jobtitle": "IT",
+    "fullName": "Fattoum Fattoumeh",
+    "jobTitle": "IT",
     "department": "Tech",
     "location": "Beirut"
   }

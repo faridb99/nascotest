@@ -32,7 +32,8 @@ td {
 
 form {
   display: flex;
-  gap: 5px;
+  gap: 10px;
+  margin: 10px;
 }
 
 form td:last-child {
@@ -41,5 +42,5 @@ form td:last-child {
 }
 
 form * {
-  font-size: 28px;
+  font-size: 22px;
 }
