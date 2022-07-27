@@ -2,13 +2,24 @@ import React from "react";
 import "./FormModal.css";
 import { nanoid } from "nanoid";
 import { useSelector, useDispatch } from "react-redux";
-import { setAddFormData, setEmployees } from "../actions";
+import { setFormData, setEmployees } from "../actions";
 
 const FormModal = (props) => {
   const employees = useSelector((state) => state.employees);
-  const addFormData = useSelector((state) => state.addFormData);
+  const formData = useSelector((state) => state.formData);
 
   const dispatch = useDispatch();
+
+  const resetFormData = () => {
+    dispatch(
+      setFormData({
+        fullName: "",
+        jobTitle: "",
+        department: "",
+        location: "",
+      })
+    );
+  };
 
   const formChangeHandler = (event) => {
     event.preventDefault();
@@ -16,28 +27,46 @@ const FormModal = (props) => {
     const inputFieldName = event.target.getAttribute("name");
     const inputFieldValue = event.target.value;
 
-    const newFormData = { ...addFormData };
+    const newFormData = { ...formData };
 
     newFormData[inputFieldName] = inputFieldValue;
 
-    dispatch(setAddFormData(newFormData));
+    dispatch(setFormData(newFormData));
   };
 
   const formSubmissionHandler = (event) => {
     event.preventDefault();
+    if (props.title === "Add Employee") {
+      const newEmployee = {
+        id: nanoid(),
+        fullName: formData.fullName,
+        jobTitle: formData.jobTitle,
+        department: formData.department,
+        location: formData.location,
+      };
 
-    const newEmployee = {
-      id: nanoid(),
-      fullName: addFormData.fullName,
-      jobTitle: addFormData.jobTitle,
-      department: addFormData.department,
-      location: addFormData.location,
-    };
+      const newEmployees = [...employees, newEmployee];
 
-    const newEmployees = [...employees, newEmployee];
+      dispatch(setEmployees(newEmployees));
+    } else {
+      const editedEmployee = {
+        id: props.editEmployeeId,
+        fullName: formData.fullName,
+        jobTitle: formData.jobTitle,
+        department: formData.department,
+        location: formData.location,
+      };
+      const newEmployees = [...employees];
 
-    dispatch(setEmployees(newEmployees));
-    props.closeModal(false);
+      const index = employees.findIndex(
+        (employee) => (employee.id = props.editEmployeeId)
+      );
+      newEmployees[index] = editedEmployee;
+      dispatch(setEmployees(newEmployees));
+      props.resetEditEmployeeId();
+    }
+    resetFormData();
+    props.closeModal();
   };
 
   return (
@@ -50,41 +79,45 @@ const FormModal = (props) => {
           <form id="employee-information-form" onSubmit={formSubmissionHandler}>
             <div className="formContainer">
               <div>
-                <text>hi:</text>
+                <text>Name:</text>
                 <input
                   type="text"
                   name="fullName"
                   required="required"
                   placeholder="Enter Name"
+                  value={formData.fullName}
                   onChange={formChangeHandler}
                 ></input>
               </div>
               <div>
-                <text>hi:</text>
+                <text>Job Title:</text>
                 <input
                   type="text"
                   name="jobTitle"
                   required="required"
                   placeholder="Enter Job Title"
+                  value={formData.jobTitle}
                   onChange={formChangeHandler}
                 ></input>
               </div>
               <div>
-                <text>hi:</text>
+                <text>Department:</text>
                 <input
                   type="text"
                   name="department"
                   required="required"
                   placeholder=" Enter Department"
+                  value={formData.department}
                   onChange={formChangeHandler}
                 ></input>
               </div>
               <div>
-                <text>hi:</text>
+                <text>Country:</text>
                 <input
                   type="text"
                   name="location"
                   required="required"
+                  value={formData.location}
                   placeholder="Enter Country"
                   onChange={formChangeHandler}
                 ></input>
@@ -93,7 +126,13 @@ const FormModal = (props) => {
           </form>
         </div>
         <div className="footer">
-          <button id="cancelBtn" onClick={() => props.closeModal(false)}>
+          <button
+            id="cancelBtn"
+            onClick={() => {
+              props.closeModal();
+              resetFormData();
+            }}
+          >
             Cancel
           </button>
           <button form="employee-information-form" type="submit">

@@ -7,6 +7,22 @@ const EmployeeRow = (props) => {
       <td>{props.employee.jobTitle}</td>
       <td>{props.employee.department}</td>
       <td>{props.employee.location}</td>
+      <td>
+        <div className="actionButtonDiv">
+          <button
+            type="button"
+            onClick={(event) => props.handleEditClick(event, props.employee)}
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            onClick={() => props.handleDeleteClick(props.employee.id)}
+          >
+            Delete
+          </button>
+        </div>
+      </td>
     </tr>
   );
 };

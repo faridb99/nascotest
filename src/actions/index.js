@@ -5,9 +5,9 @@ export const setEmployees = (employees) => {
   };
 };
 
-export const setAddFormData = (addFormData) => {
+export const setFormData = (formData) => {
   return {
-    type: "SETADDFORMDATA",
-    payload: addFormData,
+    type: "SETFORMDATA",
+    payload: formData,
   };
 };

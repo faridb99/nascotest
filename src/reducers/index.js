@@ -1,10 +1,10 @@
 import employeesReducer from "./employees";
 import { combineReducers } from "redux";
-import addFormDataReducer from "./addFormData";
+import formDataReducer from "./formData";
 
 const rootReducer = combineReducers({
   employees: employeesReducer,
-  addFormData: addFormDataReducer,
+  formData: formDataReducer,
 });
 
 export default rootReducer;

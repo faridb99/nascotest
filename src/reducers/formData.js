@@ -1,4 +1,4 @@
-const addFormDataReducer = (
+const formDataReducer = (
   state = {
     fullName: "",
     jobTitle: "",
@@ -8,7 +8,7 @@ const addFormDataReducer = (
   action
 ) => {
   switch (action.type) {
-    case "SETADDFORMDATA":
+    case "SETFORMDATA":
       return action.payload;
 
     default:
@@ -16,4 +16,4 @@ const addFormDataReducer = (
   }
 };
 
-export default addFormDataReducer;
+export default formDataReducer;
