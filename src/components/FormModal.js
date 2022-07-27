@@ -25,6 +25,7 @@ const FormModal = (props) => {
     event.preventDefault();
 
     const inputFieldName = event.target.getAttribute("name");
+    console.log(event.target);
     const inputFieldValue = event.target.value;
 
     const newFormData = { ...formData };
@@ -102,25 +103,31 @@ const FormModal = (props) => {
               </div>
               <div>
                 <text>Department:</text>
-                <input
-                  type="text"
+                <select
+                  required
                   name="department"
-                  required="required"
-                  placeholder=" Enter Department"
+                  placeholder="Enter Department"
                   value={formData.department}
                   onChange={formChangeHandler}
-                ></input>
+                >
+                  <option value="Tech">Tech</option>
+                  <option value="Business">Business</option>
+                  <option value="Operations">Operations</option>
+                </select>
               </div>
               <div>
                 <text>Country:</text>
-                <input
-                  type="text"
+                <select
+                  required
                   name="location"
-                  required="required"
                   value={formData.location}
-                  placeholder="Enter Country"
                   onChange={formChangeHandler}
-                ></input>
+                >
+                  <option value="France">France</option>
+                  <option value="Lebanon">Lebanon</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Italy">Italy</option>
+                </select>
               </div>
             </div>
           </form>

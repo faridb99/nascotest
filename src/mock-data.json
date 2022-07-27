@@ -4,20 +4,20 @@
     "fullName": "Farid Boulos",
     "jobTitle": "Developer",
     "department": "Tech",
-    "location": "Beirut"
+    "location": "Lebanon"
   },
   {
     "id": 2,
     "fullName": "Gaelle Bou Maroun",
     "jobTitle": "Marketing",
     "department": "Business",
-    "location": "USA"
+    "location": "Germany"
   },
   {
     "id": 3,
     "fullName": "Fattoum Fattoumeh",
     "jobTitle": "IT",
     "department": "Tech",
-    "location": "Beirut"
+    "location": "Italy"
   }
 ]
