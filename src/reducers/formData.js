@@ -1,3 +1,6 @@
+/* FORMDATA REDUCERS */
+
+/* Reducer to setEmployees data. Initially set to empty*/
 const formDataReducer = (
   state = {
     fullName: "",

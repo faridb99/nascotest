@@ -3,6 +3,13 @@ import { useTable } from "react-table";
 import { COLUMNS } from "./columns";
 import { useSelector } from "react-redux";
 
+/*
+This Component was used for testing the add/edit and delete features in the table using react-table.
+The functions were behaving oddly so divided into two tables for the project:
+-Filtering Table that can filter and search and uses useTable
+-Editing table that can edit the data
+With more time would have merged into one table that uses useTable 
+  */
 export const DisplayTable = (props) => {
   const employees = useSelector((state) => state.employees);
 

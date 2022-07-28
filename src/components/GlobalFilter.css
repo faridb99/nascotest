@@ -1,0 +1,11 @@
+.globalFilter {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  font-weight: 600;
+  font-size: 18px;
+}
+.globalFilterInput {
+  display: flex;
+  justify-content: space-around;
+}

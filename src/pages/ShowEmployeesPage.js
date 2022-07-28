@@ -1,6 +1,7 @@
 import React from "react";
 import { FilteringTable } from "../components/FilteringTable";
 
+/* Show Employee Page*/
 const ShowEmployeesPage = () => {
   return (
     <FilteringTable

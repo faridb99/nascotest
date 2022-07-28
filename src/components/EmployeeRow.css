@@ -1,0 +1,15 @@
+/* Spacing between Action Buttons*/
+.editingTableContainer .actionButtonDiv {
+  display: flex;
+  justify-content: space-evenly;
+}
+/* Style for Buttons*/
+td button {
+  background-color: rgb(73, 151, 252);
+  border-radius: 10px;
+  color: white;
+  padding: 5px;
+  width: 60px;
+  font-weight: 700;
+  border-width: 0;
+}

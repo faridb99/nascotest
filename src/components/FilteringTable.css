@@ -1,0 +1,55 @@
+/* Styles for main container*/
+.filteringTableContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+/* Styles for container containg global filter*/
+.globalFilterContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styles for filtering table*/
+.filteringTable {
+  margin-top: 20px;
+}
+/* TABLE HEADER STYLES*/
+
+/* Styles for Header compononent of table*/
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sortButton {
+  width: 50px;
+  height: 25px;
+  background-color: rgb(73, 151, 252);
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  border-width: 0;
+  margin-left: 15px;
+}
+
+/* PAGINATION STYLES*/
+
+/* Styles for pagination compononent of table*/
+.paginationContainer {
+  margin: 10px;
+}
+
+.paginationContainer button {
+  margin: 10px;
+  width: 80px;
+  height: 30px;
+  background-color: rgb(73, 151, 252);
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  border-width: 0;
+}

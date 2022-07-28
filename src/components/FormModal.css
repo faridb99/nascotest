@@ -1,3 +1,4 @@
+/* modal styles*/
 .modalBackground {
   width: 100vw;
   height: 100vh;
@@ -24,6 +25,7 @@
   text-align: center;
 }
 
+/* modal body styles*/
 .modalContainer .body {
   flex: 50%;
   display: flex;
@@ -57,7 +59,7 @@
   font-weight: 700;
   margin-right: 30px;
 }
-
+/* modal footer styles*/
 .modalContainer .footer {
   flex: 1%;
   display: flex;
