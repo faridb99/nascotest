@@ -4,16 +4,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Setup
 
-1- Open Project Folder with Visual Studio Code.
-2- Run npm install to install dependencies
+1- Open Project Folder with Visual Studio Code.\
+2- Run npm install to install dependencies\
 3- Go to Project folder in Terminal and run: npm start
 
 ## Usage
 
-This application is composed of two pages :
-Edit Employee and Show Employee:
-In Edit Employee page you can Add,Delete or Modify Users
-In Show Employee page you can see employees, search them and filter them by column.
+This application is composed of two pages :\
+Edit Employee and Show Employee:\
+In Edit Employee page you can Add,Delete or Modify Users\
+In Show Employee page you can see employees, search them and filter them by column.\
 
 ### `npm start`
 
